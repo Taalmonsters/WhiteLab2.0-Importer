@@ -24,7 +24,6 @@ public class MetadataFields {
 			groupProperties = new HashMap<String,Map<String,Object>>();
 			JSONObject fieldInfo = metadataFields.getJSONObject("fieldInfo");
 			metadataFields = (JSONObject) fieldInfo.getJSONObject("metadataFields");
-			@SuppressWarnings("unchecked")
 			Iterator<String> groups = (Iterator<String>) this.metadataFields.keys();
 			while (groups.hasNext()) {
 				String group = groups.next();
@@ -35,7 +34,6 @@ public class MetadataFields {
 			if (fieldInfo.has("actorFields")) {
 				actorProperties = new HashMap<String,Map<String,Object>>();
 				actorFields = (JSONObject) fieldInfo.getJSONObject("actorFields");
-				@SuppressWarnings("unchecked")
 				Iterator<String> actorGroups = (Iterator<String>) this.actorFields.keys();
 				while (actorGroups.hasNext()) {
 					String group = actorGroups.next();
@@ -78,7 +76,6 @@ public class MetadataFields {
 	}
     
     private Map<String,Object> processGroupKeys(JSONObject group, Map<String,Object> properties) throws JSONException {
-    	@SuppressWarnings("unchecked")
 		Iterator<String> keys = (Iterator<String>) group.keys();
 		while (keys.hasNext()) {
 			String key = keys.next();
