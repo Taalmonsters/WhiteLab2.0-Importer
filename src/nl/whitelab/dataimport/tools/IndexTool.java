@@ -127,7 +127,7 @@ public class IndexTool {
     }
 
     @SuppressWarnings("deprecation")
-    protected BatchInserter createBatchInserter(File graphDb, Map<String, String> c) {
+    protected BatchInserter createBatchInserter(File graphDb, Map<String, String> c) throws IOException {
         return BatchInserters.inserter(graphDb.getAbsolutePath(), c);
     }
     
