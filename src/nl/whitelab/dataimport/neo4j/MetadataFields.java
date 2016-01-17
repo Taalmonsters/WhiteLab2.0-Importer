@@ -27,7 +27,6 @@ public class MetadataFields {
 			Iterator<String> groups = (Iterator<String>) this.metadataFields.keys();
 			while (groups.hasNext()) {
 				String group = groups.next();
-//				System.out.println("Loading metadata field '"+group+"'...");
 				Map<String,Object> groupProps = this.loadMetadatumGroupProperties(group);
 				groupProperties.put(group, groupProps);
 			}
@@ -37,7 +36,6 @@ public class MetadataFields {
 				Iterator<String> actorGroups = (Iterator<String>) this.actorFields.keys();
 				while (actorGroups.hasNext()) {
 					String group = actorGroups.next();
-//					System.out.println("Loading actor field '"+group+"'...");
 					Map<String,Object> actorGroupProps = this.loadActorGroupProperties(group);
 					actorProperties.put(group, actorGroupProps);
 				}
