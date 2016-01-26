@@ -202,7 +202,7 @@ public class Corpus {
 			if (cdc == null)
 				nodeCreator.setNodeProperty(id, "document_count", collectionDocumentCounts.get(collection));
 			else
-				nodeCreator.setNodeProperty(id, "document_count", collectionDocumentCounts.get(collection) + (Long) cdc);
+				nodeCreator.setNodeProperty(id, "document_count", (Long) cdc);
 		}
 		
 		monitor.log("Finished processing corpus :"+title);
